@@ -1083,7 +1083,7 @@ nav{
 .csr-track{
     display:flex;
     align-items:center;
-    gap:70px;
+    gap:40px;
 
     width:max-content;
 
@@ -1091,21 +1091,21 @@ nav{
 }
 
 .csr-track img{
-    height:85px;
-    width:auto;
+    width:220px;
+    height:120px;
 
     object-fit:contain;
 
     background:#fff;
 
-    padding:12px 18px;
+    padding:20px;
 
     border-radius:16px;
 
-    transition:.3s ease;
-
     box-shadow:
         0 8px 20px rgba(0,0,0,.12);
+
+    transition:.3s ease;
 }
 
 .csr-track img:hover{
