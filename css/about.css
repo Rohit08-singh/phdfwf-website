@@ -1536,7 +1536,7 @@
    STICKY NAV
 ======================================== */
 
-.about-nav-wrapper{
+  .about-nav-wrapper{
 
     position:sticky;
 
@@ -1547,102 +1547,171 @@
     background:#fff;
 
     border-bottom:1px solid #ececec;
-}
-
-.about-nav{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-}
-
-.about-nav a{
-
-    padding:22px 28px;
-
-    color:#666;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    border-right:1px solid #ececec;
 
     transition:
-        all .45s cubic-bezier(.22,1,.36,1);
+        transform .35s ease,
+        opacity .35s ease;
+        
 }
 
-.about-nav a:hover{
 
-    color:#18185c;
+/* Hidden state */
 
-    background:#f8f9ff;
+.about-nav-wrapper.nav-hidden{
+
+    transform:translateY(-100%);
 }
 
-.about-nav a:last-child{
-    border-right:none;
+/* Compact state */
+
+.about-nav-wrapper.nav-compact{
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.06);
 }
 
-@media (max-width: 768px) {
+.about-nav-wrapper.nav-compact .about-nav a{
 
-    .about-nav-wrapper{
+    padding:12px 20px;
 
-        top:80px;
-        overflow:hidden;
-    }
+    font-size:14px;
+}
+   .about-nav{
+    display:flex;
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+}
 
-    .about-nav{
-
-        display:flex;
-
-        flex-wrap:nowrap;
-
-        justify-content:flex-start;
-
-        overflow-x:auto;
-
-        overflow-y:hidden;
-
-        scrollbar-width:none;
-
-        -ms-overflow-style:none;
-
-        padding:0 10px;
-
-        scroll-behavior:smooth;
-
-        white-space:nowrap;
-    }
-
-    .about-nav::-webkit-scrollbar{
-        display:none;
-    }
+.about-nav::-webkit-scrollbar{
+    display:none;
+}
 
     .about-nav a{
 
-        flex:0 0 auto;
+        padding:22px 28px;
 
-        padding:14px 20px;
+        color:#666;
 
-        font-size:14px;
+        font-size:15px;
 
-        border-right:none;
+        font-weight:600;
 
-        border-radius:30px;
+        border-right:1px solid #ececec;
 
-        margin:10px 8px;
-
-        background:#f7f7f7;
-
-        border:1px solid #ececec;
+        transition:
+            all .45s cubic-bezier(.22,1,.36,1);
     }
 
     .about-nav a:hover{
 
-        background:#154734;
+        color:#18185c;
 
-        color:#fff;
+        background:#f8f9ff;
     }
-}
+
+    .about-nav a:last-child{
+        border-right:none;
+    }
+
+    @media (max-width: 768px) {
+
+        .about-nav-wrapper{
+
+            top:80px;
+            overflow:hidden;
+        }
+
+        .about-nav{
+
+            display:flex;
+
+            flex-wrap:nowrap;
+
+            justify-content:flex-start;
+
+            overflow-x:auto;
+
+            overflow-y:hidden;
+
+            scrollbar-width:none;
+
+            -ms-overflow-style:none;
+
+            padding:0 10px;
+
+            scroll-behavior:smooth;
+
+            white-space:nowrap;
+        }
+
+        .about-nav::-webkit-scrollbar{
+            display:none;
+        }
+
+        .about-nav a{
+
+            flex:0 0 auto;
+
+            padding:14px 20px;
+
+            font-size:14px;
+
+            border-right:none;
+
+            border-radius:30px;
+
+            margin:10px 8px;
+
+            background:#f7f7f7;
+
+            border:1px solid #ececec;
+        }
+
+        .about-nav a:hover{
+
+            background:#154734;
+
+            color:#fff;
+        }
+    }
+
+    .about-nav-link {
+        position: relative;
+        color: #555;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .about-nav-link.active {
+        color: #f4b400;
+        font-weight: 600;
+    }
+
+    .about-nav-link.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 3px;
+        background: #f4b400;
+        border-radius: 50px;
+        animation: underlineSlide 0.4s ease forwards;
+    }
+
+    @keyframes underlineSlide {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+
+
+    

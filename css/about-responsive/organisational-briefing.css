@@ -1,0 +1,24 @@
+.about-nav a.active {
+
+    color: #154734;
+
+    background: #f8f8f8;
+
+    position: relative;
+}
+
+.about-nav a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+
+    bottom: 0;
+
+    height: 3px;
+
+    background: #d59a1a;
+}

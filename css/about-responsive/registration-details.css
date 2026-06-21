@@ -1,0 +1,169 @@
+.registration-section {
+    padding: 20px;
+    background: #f5f2eb;
+}
+
+.registration-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.08),
+        0 20px 60px rgba(0,0,0,0.05);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.registration-card::before {
+    content: "";
+
+    position: absolute;
+    top: -50px;
+    right: -50px;
+
+    width: 200px;
+    height: 200px;
+
+    background: rgba(21,71,52,0.06);
+    border-radius: 50%;
+}
+
+.registration-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.registration-badge {
+    display: inline-block;
+
+    padding: 10px 24px;
+
+    border: 1.5px solid #c28b16;
+
+    border-radius: 40px;
+
+    color: #c28b16;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.registration-header h1 {
+    font-size: 3rem;
+    color: #154734;
+    margin-bottom: 15px;
+}
+
+.registration-header p {
+    color: #777;
+    font-size: 16px;
+}
+
+.registration-header::after {
+    content: "";
+
+    display: block;
+
+    width: 120px;
+
+    height: 4px;
+
+    background: #c28b16;
+
+    margin: 25px auto 0;
+
+    border-radius: 50px;
+
+    animation: linePulse 3s infinite;
+}
+
+@keyframes linePulse {
+
+    0% {
+        width: 100px;
+    }
+
+    50% {
+        width: 180px;
+    }
+
+    100% {
+        width: 100px;
+    }
+}
+.registration-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+
+.detail-card {
+    background: #fafafa;
+
+    border: 1px solid #e8e8e8;
+
+    border-left: 4px solid #154734;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    transition: all .35s ease;
+}
+
+.detail-card:hover {
+
+    transform: translateY(-6px);
+
+    border-left-color: #c28b16;
+
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.detail-card h3 {
+    color: #154734;
+
+    font-size: 15px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+.detail-card p {
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #333;
+
+    margin: 0;
+}
+
+@media(max-width:768px){
+
+    .registration-card{
+        padding:35px 25px;
+    }
+
+    .registration-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full-width{
+        grid-column:auto;
+    }
+
+    .registration-header h1{
+        font-size:2rem;
+    }
+}

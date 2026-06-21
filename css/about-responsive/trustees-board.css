@@ -1,0 +1,399 @@
+.board-members{
+    padding:20px;
+}
+
+/* ===========================
+   MAIN HEADER CARD
+=========================== */
+
+.board-main-card{
+
+       background:#f4f1e8;
+
+    border:2px solid rgba(21,71,52,.08);
+
+    border-radius:24px;
+
+    padding:50px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.08);
+}
+
+.board-main-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-80px;
+    right:-80px;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            rgba(213,154,26,.15),
+            transparent 70%
+        );
+}
+
+.board-badge{
+
+    display:inline-block;
+
+    padding:10px 24px;
+
+    border:1px solid #d59a1a;
+
+    border-radius:50px;
+
+    color:#d59a1a;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    font-weight:600;
+}
+
+.board-header h1{
+
+    margin-top:25px;
+
+    font-size:3.5rem;
+
+    color:#154734;
+
+    line-height:1.1;
+}
+
+.board-header p{
+
+    color:#666;
+
+    margin-top:12px;
+
+    font-size:16px;
+}
+
+.board-header::after{
+
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:4px;
+
+    margin-top:25px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        #154734,
+        #d59a1a
+    );
+
+    animation:lineMove 3s infinite;
+}
+
+@keyframes lineMove{
+
+    0%{
+        width:100px;
+    }
+
+    50%{
+        width:220px;
+    }
+
+    100%{
+        width:100px;
+    }
+}
+
+/* ===========================
+   MEMBER SECTION
+=========================== */
+
+.member-section{
+
+    margin-top:60px;
+
+    margin-bottom:70px;
+}
+
+.member-section h2{
+
+    position:relative;
+
+    display:inline-block;
+
+    color:#154734;
+
+    font-size:2.2rem;
+
+    font-weight:700;
+
+    margin-bottom:40px;
+}
+
+.member-section h2::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-10px;
+
+    width:70px;
+    height:4px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        #154734,
+        #d59a1a
+    );
+
+    animation:titleLine 3s infinite;
+}
+
+@keyframes titleLine{
+
+    0%{
+        width:70px;
+    }
+
+    50%{
+        width:140px;
+    }
+
+    100%{
+        width:70px;
+    }
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.member-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(300px,1fr));
+
+    gap:24px;
+}
+
+/* ===========================
+   MEMBER CARD
+=========================== */
+
+.member-card{
+
+    position:relative;
+
+    background:#ffffff;
+
+    border:2px solid rgba(21,71,52,.12);
+
+    border-radius:18px;
+
+    padding:28px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08),
+        0 2px 10px rgba(0,0,0,.04);
+
+    transition:
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.member-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #154734,
+        #d59a1a
+    );
+}
+
+/* Hover Glow Only */
+
+.member-card:hover{
+
+    border-color:#d59a1a;
+
+    box-shadow:
+        0 0 0 2px rgba(213,154,26,.12),
+        0 0 18px rgba(213,154,26,.22),
+        0 10px 25px rgba(0,0,0,.08);
+}
+
+.member-card h3{
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    color:#154734;
+
+    line-height:1.4;
+
+    margin-bottom:10px;
+}
+
+.member-card span{
+
+    display:block;
+
+    color:#666;
+
+    font-size:.95rem;
+
+    line-height:1.6;
+}
+
+/* ===========================
+   FEATURED CARD
+=========================== */
+
+.featured{
+
+    background:
+        linear-gradient(
+            135deg,
+            #154734,
+            #1f6b50
+        );
+
+    border:none;
+}
+
+.featured h3,
+.featured span{
+
+    color:#fff;
+}
+
+.featured:hover{
+
+    box-shadow:
+        0 0 25px rgba(213,154,26,.35),
+        0 15px 35px rgba(0,0,0,.12);
+}
+
+/* ===========================
+   HEAD OF FOUNDATION
+=========================== */
+
+.head-card{
+
+    background:#fff;
+
+    padding:50px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    border:2px solid rgba(21,71,52,.08);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.08);
+}
+
+.head-card h2{
+
+    color:#154734;
+
+    font-size:2rem;
+
+    margin-bottom:30px;
+}
+
+.head-member{
+
+    display:inline-block;
+
+    padding:30px 50px;
+
+    border:2px solid #d59a1a;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    transition:.35s ease;
+}
+
+.head-member:hover{
+
+    box-shadow:
+        0 0 20px rgba(213,154,26,.25);
+}
+
+.head-member h3{
+
+    color:#154734;
+
+    font-size:1.5rem;
+
+    margin:0;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .board-main-card{
+        padding:30px;
+    }
+
+    .board-header h1{
+        font-size:2.3rem;
+    }
+
+    .member-section h2{
+        font-size:1.8rem;
+    }
+
+    .head-card{
+        padding:30px;
+    }
+
+    .head-member{
+        width:100%;
+        padding:25px;
+    }
+}
