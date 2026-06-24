@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   // GitHub Pages vs Localhost support
   const BASE_PATH = window.location.hostname.includes("github.io")
     ? "/phdfwf-website"
@@ -14,14 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
     "registration-details": "./about/registration-details.html",
     "geographical-area": "./about/geographical-area.html",
     "trustees-board": "./about/trustees-board.html",
-    "awards": "./about/awards.html",
-    "success-stories": "./about/success-stories.html"
+    awards: "./about/awards.html",
+    "success-stories": "./about/success-stories.html",
   };
 
   navLinks.forEach((link) => {
-
     link.addEventListener("click", async (e) => {
-
       e.preventDefault();
 
       const page = link.dataset.page;
@@ -34,20 +31,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Show main About content
       if (page === "about") {
-
         dynamicContent.innerHTML = "";
         overviewContent.style.display = "block";
 
         window.scrollTo({
           top: 0,
-          behavior: "smooth"
+          behavior: "smooth",
         });
 
         return;
       }
 
       try {
-
         const response = await fetch(pageMap[page]);
 
         if (!response.ok) {
@@ -66,11 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         window.scrollTo({
           top: 0,
-          behavior: "smooth"
+          behavior: "smooth",
         });
-
       } catch (error) {
-
         console.error(error);
 
         dynamicContent.innerHTML = `
@@ -80,9 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
       }
-
     });
-
   });
-
 });
