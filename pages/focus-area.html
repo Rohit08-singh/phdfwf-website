@@ -48,6 +48,9 @@
             <div class="logo">
                 <img src="../images/logos/New-FWF-Logo-1.jpg.jpeg" alt="PHD Family Welfare Foundation" />
             </div>
+            <div class="menu-toggle">
+                ☰
+            </div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="../index.html">Home</a></li>
@@ -175,6 +178,28 @@
             </div>
         </div>
     </footer>
+
+    <!-- mobile menu toggle script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const menuToggle =
+                document.querySelector(".menu-toggle");
+
+            const navLinks =
+                document.querySelector(".nav-links");
+
+            if (menuToggle && navLinks) {
+
+                menuToggle.addEventListener("click", function () {
+
+                    navLinks.classList.toggle("show");
+
+                });
+            }
+        });
+    </script>
+
 </body>
 
 </html>

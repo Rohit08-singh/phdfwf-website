@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 
+
+
 <body>
   <!-- TOP BAR -->
 
@@ -45,7 +47,9 @@
       <div class="logo">
         <img src="images\logos\New-FWF-Logo-1.jpg.jpeg" alt="PHD Family Welfare Foundation" />
       </div>
-
+      <div class="menu-toggle">
+        ☰
+      </div>
       <nav>
         <ul class="nav-links">
           <li><a href="#" class="active">Home</a></li>
@@ -684,6 +688,25 @@
   </footer>
 
   <script src="js/home.js" defer></script>
+
+
+  <!-- for the navbar menu toggle -->
+  <script>
+
+    const menuToggle =
+      document.querySelector(".menu-toggle");
+
+    const navLinks =
+      document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+
+      navLinks.classList.toggle("show");
+    });
+
+  </script>
+
+  
 </body>
 
 </html>
