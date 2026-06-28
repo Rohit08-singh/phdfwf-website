@@ -34,52 +34,49 @@ document.addEventListener("DOMContentLoaded", () => {
       const html = await response.text();
 
       dynamicContent.innerHTML = html;
-
+      console.log("BASE_PATH =", BASE_PATH);
+      console.log("HOST =", window.location.hostname);
       setTimeout(() => {
+        if (typeof initHealthcareSlider === "function") {
+          const healthcare = document.getElementById("healthcareSlider");
 
-  if (typeof initHealthcareSlider === "function") {
-    const healthcare =
-      document.getElementById("healthcareSlider");
+          if (healthcare) {
+            initHealthcareSlider();
+          }
+        }
 
-    if (healthcare) {
-      initHealthcareSlider();
-    }
-  }
+        if (typeof initEducationSlider === "function") {
+          const education = document.getElementById("educationSlider");
 
-  if (typeof initEducationSlider === "function") {
-    const education =
-      document.getElementById("educationSlider");
+          if (education) {
+            initEducationSlider();
+          }
+        }
 
-    if (education) {
-      initEducationSlider();
-    }
-  }
+        if (typeof initEducationMainSlider === "function") {
+          const educationMain = document.getElementById("educationMainSlider");
 
-  if (typeof initEducationMainSlider === "function") {
-    const educationMain =
-      document.getElementById("educationMainSlider");
+          if (educationMain) {
+            initEducationMainSlider();
+          }
+        }
 
-    if (educationMain) {
-      initEducationMainSlider();
-    }
-  }
+        if (typeof initCertificateSlider === "function") {
+          const certificate = document.getElementById("certificateSlider");
 
-  if (typeof initCertificateSlider === "function") {
-    const certificate =
-      document.getElementById("certificateSlider");
+          if (certificate) {
+            initCertificateSlider();
+          }
+        }
 
-    if (certificate) {
-      initCertificateSlider();
-    }
-  }
+        console.log("Page Loaded:", page);
+      }, 100);
 
-  console.log("Page Loaded:", page);
-
-}, 100);
       dynamicContent.querySelectorAll("img[data-src]").forEach((img) => {
-        img.src = `${BASE_PATH}/${img.dataset.src}`;
-      });
+        const path = img.dataset.src;
 
+        img.src = BASE_PATH ? `${BASE_PATH}/${path}` : `/${path}`;
+      });
       window.scrollTo({
         top: 0,
         behavior: "smooth",
