@@ -15,7 +15,7 @@ function initCertificateSlider() {
 
         {
             image:
-            "../../images/focus-areas/certificate-distribution/Screenshot-2025-06-18-at-9.54.17-PM.png",
+            "../images/focus-areas/certificate-distribution/Screenshot-2025-06-18-at-9.54.17-PM.png",
 
             title:
             "Meethapur Skill Development Centre",
@@ -26,7 +26,7 @@ function initCertificateSlider() {
 
         {
             image:
-            "../../images/focus-areas/certificate-distribution/Screenshot-2025-06-18-at-9.54.26-PM.png",
+            "../images/focus-areas/certificate-distribution/Screenshot-2025-06-18-at-9.54.26-PM.png",
 
             title:
             "Pochanpur Skill Development Centre",
@@ -37,7 +37,7 @@ function initCertificateSlider() {
 
         {
             image:
-            "../../images/focus-areas/certificate-distribution/Screenshot-2025-06-18-at-9.54.37-PM.png",
+            "../images/focus-areas/certificate-distribution/Screenshot-2025-06-18-at-9.54.37-PM.png",
 
             title:
             "SMPF Skill Development Centre, Dwarkapuri",
@@ -48,7 +48,7 @@ function initCertificateSlider() {
 
         {
             image:
-            "../../images/focus-areas/certificate-distribution/Screenshot-2025-06-18-at-9.54.56-PM.png",
+            "../images/focus-areas/certificate-distribution/Screenshot-2025-06-18-at-9.54.56-PM.png",
 
             title:
             "Jaquar Skill Development Centre, Assam",
@@ -59,7 +59,7 @@ function initCertificateSlider() {
 
         {
             image:
-            "../../images/focus-areas/certificate-distribution/Screenshot-2025-06-18-at-9.55.04-PM.png",
+            "../images/focus-areas/certificate-distribution/Screenshot-2025-06-18-at-9.55.04-PM.png",
 
             title:
             "WRG Skill Development Centre, Mehrauli",
@@ -70,7 +70,7 @@ function initCertificateSlider() {
 
         {
             image:
-            "../../images/focus-areas/certificate-distribution/Screenshot-2025-06-18-at-9.55.11-PM.png",
+            "../images/focus-areas/certificate-distribution/Screenshot-2025-06-18-at-9.55.11-PM.png",
 
             title:
             "Odisha Skill Development Centres",
