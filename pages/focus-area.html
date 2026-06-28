@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/focus-area/education-skill.css">
+    <link rel="stylesheet" href="../css/about-responsive/about-responsive.css">
+
+
+    <link rel="stylesheet" href="../css/focus-area/healthcare-community.css">
 </head>
 
 <body>
@@ -54,8 +59,8 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="focus-area.html">Focus Area</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="focus-area.html" class="active">Focus Area</a></li>
                     <li><a href="csr-projects.html">CSR Projects</a></li>
                     <li><a href="programme.html">Programme</a></li>
                     <li><a href="reports.html">Reports</a></li>
@@ -65,119 +70,90 @@
         </div>
     </header>
 
-    <!-- ========================================
-         ABOUT PAGE HERO
-    ======================================== -->
+    <section class="about-nav-wrapper">
 
-    <section class="hero">
         <div class="container">
-            <h1>About PHDFWF</h1>
-            <p>
-                Serving communities through healthcare,
-                education, skill development and
-                social welfare initiatives since 1985.
-            </p>
-        </div>
-    </section>
 
-    <!-- ========================================
-         ABOUT PAGE CONTENT
-    ======================================== -->
+            <div class="about-nav">
 
-    <section class="about-page">
-        <div class="container">
-            <h2>Our Journey</h2>
-            <p>
-                PHD Family Welfare Foundation (PHD-FWF) is a registered trust working towards healthcare, education,
-                skill development and social welfare initiatives across India. Since its inception in 1985, PHD-FWF has
-                been dedicated to improving the lives of underprivileged communities through sustainable development
-                programs and impactful interventions.
-            </p>
+                <a href="#" class="about-nav-link active" data-page="healthcare-community">
+                    Healthcare & Community
+                </a>
+
+                <a href="#" class="about-nav-link" data-page="education-skill">
+                    Education & Skill Development
+                </a>
+
+                <a href="#" class="about-nav-link" data-page="disaster-relief">
+                    Disaster Relief & Resource Mobilization
+                </a>
+
+                <a href="#" class="about-nav-link" data-page="water-events">
+                    Water & Events
+                </a>
+
+            </div>
+
         </div>
 
     </section>
+
+
+    <section id="dynamic-focus-content">
+
+        <!-- Dynamic content will be loaded here based on navigation -->
+
+    </section>
+
+
 
     <!-- ========================================
          FOOTER
     ======================================== -->
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-main">
-                <!-- Column 1 -->
 
-                <div class="footer-brand">
-                    <img src="images/logos/New-FWF-Logo-1.jpg.jpeg" alt="PHDFWF Logo" class="footer-logo" />
-                    <p>
-                        PHD Family Welfare Foundation is a registered trust working
-                        towards healthcare, education, skill development and social
-                        welfare initiatives across India since 1985.
-                    </p>
-                    <span>
-                        80G Certified • FCRA Registered • Indian Trust Act 1882
-                    </span>
 
-                    <div class="footer-contact">
-                        <p>📍 New Delhi, India</p>
-                        <p>📞 011-49545454 Extn: 283/498</p>
-                        <p>✉ headoffice@phdfwf.org</p>
-                    </div>
-                </div>
+    <script>
 
-                <!-- Column 2 -->
+        let lastScroll = window.pageYOffset;
 
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
+        const aboutNav =
+            document.querySelector(".about-nav-wrapper");
 
-                    <ul>
-                        <li><a href="#">About PHDFWF</a></li>
-                        <li><a href="#">Board Members</a></li>
-                        <li><a href="#">Registration Details</a></li>
-                        <li><a href="#">Partners & Supporters</a></li>
-                        <li><a href="#">Awards & Recognition</a></li>
-                    </ul>
-                </div>
+        window.addEventListener("scroll", () => {
 
-                <!-- Column 3 -->
+            const currentScroll =
+                window.pageYOffset;
 
-                <div class="footer-links">
-                    <h4>Focus Areas</h4>
+            /* Compact mode */
 
-                    <ul>
-                        <li><a href="#">Healthcare Projects</a></li>
-                        <li><a href="#">Skill Development</a></li>
-                        <li><a href="#">Education</a></li>
-                        <li><a href="#">Women Empowerment</a></li>
-                        <li><a href="#">Disaster Relief</a></li>
-                    </ul>
-                </div>
-                <!-- Column 4 -->
-                <div class="footer-links">
-                    <h4>Get Involved</h4>
+            if (currentScroll > 150) {
 
-                    <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Become a Volunteer</a></li>
-                        <li><a href="#">Upcoming Programmes</a></li>
-                        <li><a href="#">Annual Reports</a></li>
-                        <li><a href="#">Monthly Bulletins</a></li>
-                    </ul>
-                </div>
-            </div>
+                aboutNav.classList.add("nav-compact");
 
-            <div class="footer-bottom">
-                <p>© 2026 PHD Family Welfare Foundation. All Rights Reserved.</p>
+            } else {
 
-                <div class="social-icons">
-                    <a href="#">f</a>
+                aboutNav.classList.remove("nav-compact");
+            }
 
-                    <a href="#">in</a>
+            /* Hide on scroll down */
 
-                    <a href="#">✉</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+            if (
+                currentScroll > lastScroll &&
+                currentScroll > 200
+            ) {
+
+                aboutNav.classList.add("nav-hidden");
+
+            } else {
+
+                aboutNav.classList.remove("nav-hidden");
+            }
+
+            lastScroll = currentScroll;
+        });
+
+    </script>
 
     <!-- mobile menu toggle script -->
     <script>
@@ -200,6 +176,11 @@
         });
     </script>
 
+    <script src="../js/focus-area/healthcare-slider.js"></script>
+    <script src="../js/focus-area/education-skill.js"></script>
+    <script src="../js/focus-area/certificate-slider.js"></script>
+    <script src="../js/focus-area/education-main.js"></script>
+    <script src="../js/focus-loader.js"></script>
 </body>
 
 </html>
