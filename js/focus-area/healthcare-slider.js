@@ -17,7 +17,7 @@ function initHealthcareSlider() {
     {
       image:
         "../images/focus-areas/healthcare/Screenshot-2025-06-16-at-6.56.56-PM.png",
-      title: "Free Medical Consultations",
+      title: "Target Intervention Project on HIV/AIDS",
       description:
         "Volunteer doctors providing healthcare consultations and basic treatment.",
     },
@@ -25,7 +25,7 @@ function initHealthcareSlider() {
     {
       image:
         "../images/focus-areas/healthcare/Screenshot-2025-06-16-at-6.57.10-PM.png",
-      title: "Community Health Awareness",
+      title: "PHDFWF-SMPF Mobile Medical Van",
       description:
         "Educating families on preventive healthcare and healthy lifestyle practices.",
     },
@@ -33,7 +33,7 @@ function initHealthcareSlider() {
     {
       image:
         "../images/focus-areas/healthcare/Screenshot-2025-06-16-at-6.57.22-PM.png",
-      title: "Healthcare Outreach Camp",
+      title: "PHDFWF- Jaquar Foundation Mobile Medical Van (Gurugram, Haryana)",
       description:
         "Extending medical support to underserved communities through outreach initiatives.",
     },
@@ -41,7 +41,7 @@ function initHealthcareSlider() {
     {
       image:
         "../images/focus-areas/healthcare/Screenshot-2025-06-16-at-6.57.34-PM.png",
-      title: "Women & Child Healthcare",
+      title: "PHDFWF- Jaquar Foundation Dental and Eye Mobile Van",
       description:
         "Special healthcare services focused on maternal and child wellbeing.",
     },
@@ -49,10 +49,37 @@ function initHealthcareSlider() {
     {
       image:
         "../images/focus-areas/healthcare/Screenshot-2025-06-16-at-6.57.55-PM.png",
-      title: "Mobile Medical Services",
+      title: "PHDFWF- Jaquar Foundation Mobile Medical Van (Kharoi, Gujarat)",
       description:
         "Healthcare services reaching remote areas through mobile medical units.",
     },
+
+    {
+      image:
+        "../images/focus-areas/healthcare/Screenshot-2025-06-16-at-6.58.55-PM.png",
+      title: "PHDFWF-AAOT Mobile Medical Van",
+      description:
+        "Healthcare services reaching remote areas through mobile medical units.",
+    },
+
+    {
+      image:
+        "../images/focus-areas/healthcare/Screenshot-2025-06-16-at-6.58.45-PM.png",
+      title:
+        "PHDFWF-AAOT Mobile Medical VaNew Zealand High Commission -Healthcare Projects(General and Eye Dental Health Check-up Camps)",
+      description:
+        "Healthcare services reaching remote areas through mobile medical units.",
+    },
+
+        {
+      image:
+        "../images/focus-areas/healthcare/Screenshot-2025-06-16-at-6.58.25-PM.png",
+      title:
+        "PHDFW-Jaquar- Mobile Medical Van, Delhi NCR",
+      description:
+        "Healthcare services reaching remote areas through mobile medical units.",
+    },
+
   ];
 
   const nextBtn = document.querySelector(".gallery-btn.next");
